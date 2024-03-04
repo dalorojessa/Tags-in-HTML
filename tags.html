@@ -3,18 +3,99 @@
 <html>
 <head>
     <style>
-        .docu{
-            color: black;
-            background-color: darksalmon;
+        .document, .text_formatting, .lists, .links {
+            margin: 0;
+            padding: 0;
         }
+
+        .document{
+            color: black;
+            background-color:lemonchiffon;
+            padding-bottom: 1mm;
+        }
+
+        .text_formatting{
+            color:black;
+            background-color: antiquewhite;
+            padding-top: 1mm;
+            padding-bottom: 1mm;
+        }
+
+        mark {
+            background-color: black;
+            color: white;
+        }
+
+        .lists{
+            color: black;
+            background-color: bisque;
+            padding-top: 1mm;
+            padding-bottom: 1mm;
+        }
+
+        .links{
+            color: black;
+            background-color:lightgoldenrodyellow;
+            padding-top: 1mm;
+            padding-bottom: 1mm;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content img,
+        .content audio,
+        .content iframe {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .video,
+        .image,
+        .audio {
+            width: 30%;
+        }
+
+        table, th, td {
+            border:1px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color:lightgrey;
+        }
+
+        th {
+            background-color:whitesmoke;
+            color: rgb(5, 5, 5);
+        }
+
+        .tab_sched{
+            background-color:wheat;
+            padding-top: 1mm;
+        }
+
     </style>
     <meta name="author" content="Jessa">
     <title>TAGS IN HTMLS</title>
 </head>
 <body>
-    <h1>WEB SYSTEMS AND MANAGEMENT</h1>
-    <div class="docu">
-    <h2>DOCUMENT STRUCTURE</h2>
+    <h1 style="text-align: center;">WEB SYSTEMS AND MANAGEMENT</h1>
+    <div class="document">
+    <h2>Implementing Document Structure in HTML</h2>
     <h3>Jessa Mae D. Daloro</h3>
     <h4>BSIT - 2R3</h4>
     <h5>February 29, 2024</h5>
@@ -22,37 +103,12 @@
     <p>These are some of the document structure in HTML. And this is an example of the paragraph tag.</p>
     <p>Next document structure tag in the html that we can use is the break line. Here we can see <br> a single line break in this sentence.</p>
     </div>
-</body>
 
-<head>
-    <style>
-        .text_formatting{
-            color:black;
-            font-family: monospace;
-            background-color: antiquewhite;
-        }
-        mark {
-            background-color: black;
-            color: white;
-        }
-    </style>
-</head>
-<body>
     <div class ="text_formatting">
-        <h2>Implementing Text Formatting in HTML in one paragraph</h2>
+        <h2>Implementing Text Formatting in HTML</h2>
         <p>I am <strong>Jessa Mae D. Daloro</strong> and I am 19 <small>years old</small>. I'm 2<sup>nd</sup> year student currently studying at <abbr title="University of Science and Technology in Southern Philippines">USTP</abbr> taking up <b>Bachelor of Science in Information Technology</b>.<br> Things to know about me is that I really love <i>"Sinigang"</i>, it is my favorite and comfort food. My favorite color is <del>blue</del> <mark>black</mark>. And one of my favorite drink <wbr> is <em>H<sub>2</sub>O</em>, the water.</sub></p>
     </div>
-</body>
 
-<head>
-    <style>
-        .lists{
-            color: black;
-            background-color: darkseagreen;
-        }
-    </style>
-</head>
-<body>
     <div class="lists">
         <h2>Implementing Lists in HTML</h2>
         <h4>Foods I love to eat:</h4>
@@ -78,23 +134,83 @@
             <li>Thriller</li>
         </ul>
     </div>
-</body>
 
-<head>
-    <style>
-        .links{
-            color: black;
-            background-color:cornsilk;
-        }
-    </style>
-</head>
-<body>
     <div class="links">
         <h2>Implementing Links in HTML</h2>
         <p>This is the link to my <a href="https://www.facebook.com/jessa.daloro/" target="facebook account">facebook account</a>.</p>
     </div>
+
+    <div class="tab_sched">
+        <h2>Implementing Table in HTML</h2>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Schedule</th>
+                <th>Day</th>
+            </tr>
+            <tr>
+                <td>Information Management</td>
+                <td>10:30 - 1:30 PM <br> 1:00 - 3:00 PM</td>
+                <td>Wednesday <br> Tuesday</td>
+            </tr>
+            <tr>
+                <td>Networking 1</td>
+                <td>6:00 - 9:00 PM <br> 9:00 - 11:00 AM</td>
+                <td>Tuesday <br> Saturday</td>
+            </tr>
+            <tr>
+                <td>Web Systems and Technologies</td>
+                <td>11:00 - 1:00 PM <br> 10:30 - 1:30 PM</td>
+                <td>Tuesday <br> Thursday</td>
+            </tr>
+            <tr>
+                <td>Systems Integration and Architecture</td>
+                <td>6:00 - 8:00 PM <br> 1:30 - 4:30 PM</td>
+                <td>Thursday <br> Saturday</td>
+            </tr>
+            <tr>
+                <td>Ethics</td>
+                <td>9:00 - 10:30 AM <br> 9:00 - 10:30 AM</td>
+                <td>Monday <br> Thursday</td>
+            </tr>
+            <tr>
+                <td>Life and Works of Rizal</td>
+                <td>9:00 - 10:30 AM <br> 9:00 - 10:30 AM</td>
+                <td>Tuesday <br> Friday</td>
+            </tr>
+            <tr>
+                <td>PATH FIT 4</td>
+                <td>3:00 - 5:00 PM</td>
+                <td>Wednesday</td>
+            </tr>
+            <caption style="font-size:8mm;">Schedule</caption>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Video</h2>
+            <div class="video">
+                <iframe width="560" height="260" src="https://www.youtube.com/embed/CLk7A7HXhYQ?si=zxInphnXbSQP8ub1&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Image</h2>
+            <div class="image">
+                <img src="j.jpg" alt="My picture" width="240" height="260">
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Audio</h2>
+            <div class="audio">
+                <audio controls>
+                    <source src="Everything I Own.ogg" type="audio/ogg">
+                    <source src="Everything I Own.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
 </body>
-
-
-
 </html>
